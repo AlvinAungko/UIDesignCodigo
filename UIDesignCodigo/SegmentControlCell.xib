@@ -17,12 +17,12 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Se-Bu-fP6">
-                        <rect key="frame" x="10" y="10" width="269" height="96"/>
+                        <rect key="frame" x="10" y="10" width="269" height="31"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="l7Z-hY-Stt" customClass="CustomSegmentedControl" customModule="UIDesignCodigo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="269" height="97"/>
+                                <rect key="frame" x="0.0" y="0.0" width="269" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="LI8-28-8Yy"/>
+                                    <constraint firstAttribute="height" constant="45" id="LI8-28-8Yy"/>
                                 </constraints>
                                 <segments>
                                     <segment title="First"/>
@@ -40,6 +40,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="segmentControl" destination="l7Z-hY-Stt" id="K3q-Xs-ufe"/>
             </connections>

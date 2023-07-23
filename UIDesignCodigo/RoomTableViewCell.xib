@@ -25,6 +25,9 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Resort" translatesAutoresizingMaskIntoConstraints="NO" id="HLv-34-Kdg">
                                         <rect key="frame" x="0.0" y="0.0" width="365" height="208"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="208" id="T2J-0p-q7K"/>
+                                        </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="DZJ-nV-zg6">
                                         <rect key="frame" x="0.0" y="218" width="365" height="40.666666666666686"/>

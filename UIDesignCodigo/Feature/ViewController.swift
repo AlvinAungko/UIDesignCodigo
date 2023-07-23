@@ -7,6 +7,21 @@
 
 import UIKit
 
+enum RoomOrRate {
+    case isRoom
+    case isRate
+}
+
+enum MainSections {
+    case categories
+    case segment
+    case roomOrRate
+}
+
+protocol ViewDelegate: AnyObject {
+    func didTapSegment(value: Int)
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -14,6 +29,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var sgdButton: UIButton!
     @IBOutlet weak var chatIcon: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var sections: [MainSections] = [
+        .categories,
+        .segment,
+        .roomOrRate,
+    ]
+    
+    var roomOrRateStatus: RoomOrRate = .isRoom
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +69,13 @@ class ViewController: UIViewController {
             RoomTableViewCell.className,
             RateTableViewCell.className
         )
+    }
+}
+
+extension ViewController: ViewDelegate {
+    func didTapSegment(value: Int) {
+        self.roomOrRateStatus = value == 0 ? .isRoom : .isRate
+        self.tableView.reloadSections(IndexSet(integer: 2), with: .fade)
     }
 }
 
